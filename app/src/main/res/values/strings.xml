@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Hospital Universitario</string>
+    <string name="doctor_role">doctor</string>
+    <string name="patient_role">patient</string>
+    <string-array name="user_roles">
+        <item>patient</item>
+        <item>doctor</item>
+    </string-array>
+    <string name="label_select_role">Seleccionar rol:</string>
+
+    <!-- Pantalla de Login -->
+    <string name="login_welcome">Bienvenido a Hospital Universitario</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="button_login">Iniciar sesión</string>
+    <string name="link_register">¿No tienes cuenta? Registrate aquí.</string>
+    <string name="error_invalid_email">Por favor, ingrese un correo electrónico válido.</string>
+    <string name="error_password_weak">La contraseña debe tener mínimo 6 caracteres.</string>
+    <string name="error_login_failed">Inicio de sesión fallido: %s</string>
+    <string name="success_login">Inicio de sesión exitoso!</string>
+    <string name="error_user_not_logged_in">Usuario no logueado. Por favor, inicie sesión.</string>
+    <string name="error_user_profile_not_found">No se encontró el perfil de usuario. Contacte con el servicio de asistencia.</string>
+    <string name="error_unrecognized_role">Rol de usuario no reconocido. Contacte con el soporte técnico.</string>
+
+    <!-- Pantalla de Registro -->
+    <string name="register_title">Registra una nueva cuenta</string>
+    <string name="hint_full_name">Nombre completo</string>
+    <string name="hint_confirm_password">Confirma la contraseña</string>
+    <string name="button_register">Registrarse</string>
+    <string name="link_back_to_login">¿Ya tienes una cuenta? Inicia sesión aquí.</string>
+    <string name="error_empty_field">Este campo no puede estar vacío.</string>
+    <string name="error_password_match">La contraseña no es la misma.</string>
+    <string name="error_registration_failed">Registro fallido: %s</string>
+    <string name="success_registration">¡Registrado exitosamente!</string>
+
+    <!-- Pantalla Main (Doctor) -->
+    <string name="home_title">Hospital Universitario</string>
+    <string name="welcome_message">Bienvenido, %1$s! (Rol: %2$s)</string>
+    <string name="user_id_display">User ID: %1$s</string>
+    <string name="hospital_logo_description">Hospital Universitario Logo</string>
+    <string name="button_manage_patients">Gestionar pacientes</string>
+    <string name="button_logout">Cerrar sesión</string>
+    <string name="nav_main_text">Usa los botones para navegar:</string>
+
+    <!-- Mapa del hospital -->
+    <string name="button_view_hospital_location">Ver ubicación del hospital</string>
+    <string name="hospital_address_for_map">Hospital Universitario, Buenos Aires, Argentina</string>
+    <string name="no_map_app_found">No se encuentra el mapa.</string>
+
+    <!-- Pantalla de Lista de Pacientes -->
+    <string name="patients_list_title">Pacientes</string>
+    <string name="no_patients_found">No hay pacientes. Selecciona uno o registra un nuevo paciente.</string>
+    <string name="button_add_patient">Agregar nuevo paciente</string>
+    <string name="desc_patient_list">Lista de pacientes.</string>
+
+    <!-- Pantalla de Detalles del Paciente -->
+    <string name="patient_details_title">Detalles de paciente</string>
+    <string name="button_edit">Editar paciente</string>
+    <string name="button_delete">Eliminar paciente</string>
+    <string name="confirm_delete_patient_title">Confirmar la eliminación</string>
+    <string name="confirm_delete_patient_message">¿Estás seguro de que quieres eliminar al paciente %1$s?</string>
+    <string name="success_patient_deleted">Paciente eliminado exitosamente.</string>
+    <string name="error_deleting_patient">Error al eliminar al paciente</string>
+    <string name="no_address_available">No hay ninguna dirección disponible para este paciente.</string>
+
+    <!-- Etiquetas para la visualización de detalles del paciente -->
+    <string name="label_patient_name_display">Nombre:</string>
+    <string name="label_patient_age_display">Edad:</string>
+    <string name="label_patient_gender_display">Genero:</string>
+    <string name="label_patient_diagnosis_display">Diagnostico:</string>
+    <string name="label_patient_room_number_display">Numero de habitación:</string>
+    <string name="label_patient_visit_date_display">Fecha de Visita:</string>
+    <string name="label_patient_attending_doctor_display">Doctor:</string>
+    <string name="label_hospital_address_display">Ubicación del paciente:</string>
+
+    <!-- Pantalla de Añadir/Editar Paciente -->
+    <string name="add_patient_title">Agregar historial a paciente</string>
+    <string name="edit_patient_title">Editar historial de paciente</string>
+    <string name="hint_patient_name">Nombre del paciente</string>
+    <string name="hint_patient_age">Edad del paciente</string>
+    <string name="hint_patient_gender">Genero del paciente</string>
+    <string-array name="gender_options">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+    <string name="hint_patient_other_gender">Especifique su género</string>
+    <string name="error_other_gender_empty">Por favor, especifique el género.</string>
+    <string name="hint_patient_diagnosis">Diagnostico</string>
+    <string name="hint_patient_room_number">Numero de habitación:</string>
+    <string name="hint_patient_visit_date">Fecha de Visita (AAAA-MM-DD)</string>
+    <string name="hint_patient_attending_doctor">Doctor:</string>
+    <string name="hint_patient_address">Ubicación del paciente:</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_save">Guardar</string>
+    <string name="success_patient_added">Historial del paciente agregado exitosamente.</string>
+    <string name="success_patient_updated">Historial del paciente actualizado exitosamente.</string>
+    <string name="error_saving_patient">Error al guardar el historial del paciente</string>
+    <string name="error_invalid_visit_date">La fecha de visita no puede ser futura ni tener un formato inválido (AAAA-MM-DD).</string>
+
+
+    <!-- Mensajes de Autenticación y Perfil -->
+    <string name="access_denied_admin">Acceso denegado, solo los doctores pueden acceder.</string>
+    <string name="confirm_delete_user_title">Confirmar eliminación de usuario</string>
+    <string name="confirm_delete_user_message">¿Estás seguro de que deseas eliminar el perfil de este usuario? Esta acción es irreversible.</string>
+    <string name="user_profile_deleted">Perfil de usuario eliminado exitosamente.</string>
+    <string name="error_deleting_user_profile">Error al eliminar el perfil de usuario</string>
+    <string name="no_user_logged_in_access_denied">No user logged in (access unauthorized).</string>
+    <string name="label_age">Edad: </string>
+    <string name="label_room">Habitacion: </string>
+    <string name="label_diagnosis">Diagnostico: </string>
+
+    <string name="label_patient_name">Nombre del paciente:</string>
+    <string name="label_patient_age">Edad:</string>
+    <string name="label_patient_gender">Genero:</string>
+    <string name="label_patient_diagnosis">Diagnostico:</string>
+    <string name="label_patient_room_number">Numero de habitación:</string>
+    <string name="label_patient_visit_date">Fecha de Visita:</string>
+    <string name="label_patient_attending_doctor">Doctor que lo atendió:</string>
+    <string name="label_hospital_address">Dirección del paciente:</string>
+
+    <string name="patient_home_title">Registro clínico</string>
+    <string name="label_my_diagnosis">Mi diagnostico:</string>
+    <string name="label_my_doctor">Doctor que atendió:</string>
+    <string name="label_next_appointment">Próxima visita:</string>
+    <string name="button_add_to_calendar">Agregar cita a tu calendario</string>
+    <string name="calendar_event_title">Cita con: %1$s</string>
+    <string name="calendar_event_description">Diagnostico: %1$s</string>
+    <string name="error_no_appointment_date">No hay fecha de cita disponible.</string>
+    <string name="error_calendar_add_failed">No se pudo agregar al calendario. No se encontró ninguna aplicación de calendario.</string>
+    <string name="success_calendar_add">Cita añadida al calendario.</string>
+
+    <!-- Nuevas cadenas para la selección de paciente por doctor -->
+    <string name="select_patient_title">Seleccionar Paciente</string>
+    <string name="no_patient_users_found">No se encontraron usuarios con rol de paciente.</string>
+    <string name="hint_search_patient_user">Buscar paciente por nombre o email</string>
+    <string name="patient_selected_for_record">Paciente seleccionado: %1$s</string>
+
+</resources>

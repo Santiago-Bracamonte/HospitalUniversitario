@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".AddEditPatientActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:id="@+id/tvAddEditPatientTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_patient_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Nombre del Paciente -->
+        <TextView
+            android:id="@+id/labelPatientName"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_name"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddEditPatientTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etPatientName"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_name"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Edad del Paciente -->
+        <TextView
+            android:id="@+id/labelPatientAge"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_age"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etPatientAge"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_age"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientAge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Género del Paciente -->
+        <TextView
+            android:id="@+id/labelPatientGender"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_gender"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientAge"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerPatientGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext_background"
+            android:padding="16dp"
+            android:spinnerMode="dropdown"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo "Otro Género" -->
+        <EditText
+            android:id="@+id/etPatientOtherGender"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_other_gender"
+            android:inputType="textCapWords"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPatientGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Diagnóstico -->
+        <TextView
+            android:id="@+id/labelPatientDiagnosis"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_diagnosis"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientOtherGender"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etPatientDiagnosis"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_diagnosis"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:gravity="top|start"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientDiagnosis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Número de Habitación -->
+        <TextView
+            android:id="@+id/labelPatientRoomNumber"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_room_number"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientDiagnosis"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etPatientRoomNumber"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_room_number"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientRoomNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Fecha de Visita -->
+        <TextView
+            android:id="@+id/labelPatientVisitDate"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_visit_date"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientRoomNumber"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etPatientVisitDate"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_visit_date"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientVisitDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Doctor que lo Atendió -->
+        <TextView
+            android:id="@+id/labelPatientAttendingDoctor"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_attending_doctor"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientVisitDate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etPatientAttendingDoctor"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_attending_doctor"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelPatientAttendingDoctor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Dirección del Hospital -->
+        <TextView
+            android:id="@+id/labelHospitalAddress"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_hospital_address"
+            app:layout_constraintTop_toBottomOf="@+id/etPatientAttendingDoctor"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etHospitalAddress"
+            style="@style/RoundedEditTextStyle"
+            android:hint="@string/hint_patient_address"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/labelHospitalAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón para Agregar al Calendario -->
+        <Button
+            android:id="@+id/btnAddToCalendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add_to_calendar"
+            android:background="@drawable/rounded_card_background"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/etHospitalAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón para Eliminar Paciente -->
+        <Button
+            android:id="@+id/btnDeletePatient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_delete"
+            android:backgroundTint="@color/colorError"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddToCalendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- Botones de Guardar y Cancelar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeletePatient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_cancel"
+                android:background="@drawable/rounded_card_background"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_save"
+                android:background="@drawable/rounded_card_background"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBarAddEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

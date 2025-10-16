@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731788900150",
+    "project_id": "hospitaluniversitario-5e35b",
+    "storage_bucket": "hospitaluniversitario-5e35b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731788900150:android:f784929944446bf9482597",
+        "android_client_info": {
+          "package_name": "com.example.hospitaluniversitario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIJU_pCIFiZcXVEx_iBOd_rv8JiyW07t4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

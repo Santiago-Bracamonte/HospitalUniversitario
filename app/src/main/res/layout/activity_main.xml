@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity"> <!-- ¡Contexto actualizado! -->
+
+    <!-- Mensaje de bienvenida al usuario logueado -->
+    <TextView
+        android:id="@+id/tvWelcomeUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bienvenido, Nombre de Usuario! (Rol: doctor)" />
+
+    <!-- Display del ID de usuario (útil para identificación en apps colaborativas) -->
+    <TextView
+        android:id="@+id/tvUserId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textColor="@color/colorTextSecondary"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="ID de Usuario: abcdef1234567890abcdef1234567890" />
+
+    <!-- IMAGEN DEL HOSPITAL -->
+    <ImageView
+        android:id="@+id/ivHospitalLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/hospital_logo"
+        android:contentDescription="@string/hospital_logo_description"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/tvNavInstruction" />
+
+    <!-- Texto de instrucción de navegación -->
+    <TextView
+        android:id="@+id/tvNavInstruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_main_text"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorTextSecondary"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivHospitalLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewHospitalLocation" />
+
+    <!-- Botón para ver la ubicación del hospital -->
+    <Button
+        android:id="@+id/btnViewHospitalLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_view_hospital_location"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvNavInstruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnManagePatients" />
+
+    <!-- Botón para gestionar pacientes -->
+    <Button
+        android:id="@+id/btnManagePatients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_manage_patients"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewHospitalLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout" />
+
+    <!-- Botón para cerrar sesión -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_logout"
+        android:backgroundTint="@color/colorError"
+        android:textColor="@color/white"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManagePatients"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

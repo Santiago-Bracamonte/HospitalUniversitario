@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".PatientDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:id="@+id/tvPatientDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_details_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Detalles del Paciente -->
+        <!-- Nombre del Paciente -->
+        <TextView
+            android:id="@+id/tvLabelPatientName"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_name_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvPatientDetailTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            style="@style/DetailTextView"
+            tools:text="Santiago Pérez"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientName"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientName" />
+
+        <!-- Edad del Paciente -->
+        <TextView
+            android:id="@+id/tvLabelPatientAge"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_age_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPatientAge"
+            style="@style/DetailTextView"
+            tools:text="30"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientAge"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientAge" />
+
+        <!-- Género del Paciente -->
+        <TextView
+            android:id="@+id/tvLabelPatientGender"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_gender_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientAge"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPatientGender"
+            style="@style/DetailTextView"
+            tools:text="Masculino"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientGender"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientGender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientGender" />
+
+        <!-- Diagnóstico -->
+        <TextView
+            android:id="@+id/tvLabelPatientDiagnosis"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_diagnosis_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientGender"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPatientDiagnosis"
+            style="@style/DetailTextView"
+            tools:text="Apendicitis aguda"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientDiagnosis"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientDiagnosis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientDiagnosis" />
+
+        <!-- Número de Habitación -->
+        <TextView
+            android:id="@+id/tvLabelPatientRoomNumber"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_room_number_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientDiagnosis"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPatientRoomNumber"
+            style="@style/DetailTextView"
+            tools:text="205"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientRoomNumber"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientRoomNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientRoomNumber" />
+
+        <!-- Fecha de Visita (ANTES Fecha de Admisión) -->
+        <TextView
+            android:id="@+id/tvLabelPatientVisitDate"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_visit_date_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientRoomNumber"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPatientVisitDate"
+            style="@style/DetailTextView"
+            tools:text="2024-06-29"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientVisitDate"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientVisitDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientVisitDate" />
+
+        <!-- Médico Tratante -->
+        <TextView
+            android:id="@+id/tvLabelPatientAttendingDoctor"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_patient_attending_doctor_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientVisitDate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPatientAttendingDoctor"
+            style="@style/DetailTextView"
+            tools:text="Dr. Juan Pérez"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelPatientAttendingDoctor"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelPatientAttendingDoctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelPatientAttendingDoctor" />
+
+        <!-- Dirección del Hospital -->
+        <TextView
+            android:id="@+id/tvLabelHospitalAddress"
+            style="@style/DetailLabelTextView"
+            android:text="@string/label_hospital_address_display"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPatientAttendingDoctor"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHospitalAddress"
+            style="@style/DetailTextView"
+            tools:text="Av. Siempreviva 742, Springfield"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelHospitalAddress"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelHospitalAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelHospitalAddress" />
+
+        <!-- Botones de Acción -->
+        <LinearLayout
+            android:id="@+id/linearLayoutButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvHospitalAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnEditPatient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_edit"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnDeletePatient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_delete"
+                android:backgroundTint="@color/colorError"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- ProgressBar para indicar carga -->
+        <ProgressBar
+            android:id="@+id/progressBarDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
