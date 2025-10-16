@@ -37,17 +37,3 @@ Librerías/APIs clave:
 Android SDK y Gradle.
 
 Calendar Provider API (para la función de añadir citas).
-
-📄 Estructura de la Base de Datos (Firestore)
-
-Los datos de los pacientes se almacenan en una colección pública bajo el siguiente esquema:
-
-/artifacts/{appId}/public/data/patients/{patientUid}
-    |-- name: "Nombre del Paciente"
-    |-- age: "Edad"
-    |-- gender: "Género"
-    |-- diagnosis: "Diagnóstico de la Visita"
-    |-- roomNumber: "Número de Habitación"
-    |-- visitDate: "AAAA-MM-DD"
-    |-- attendingDoctor: "Nombre del Doctor"
-    |-- hospitalLocationAddress: "Dirección del Hospital"
