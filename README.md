@@ -37,3 +37,7 @@ Librerías/APIs clave:
 Android SDK y Gradle.
 
 Calendar Provider API (para la función de añadir citas).
+
+📦 [Descargar la última versión del APK] https://github.com/Santiago-Bracamonte/HospitalUniversitario/releases/tag/v1.0.0
+
+
